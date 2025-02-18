@@ -3,12 +3,12 @@ import './App.css';
 import TabelGenerator from "./Tabel.js"
 
 function App() {
-return(
-  <div>
-    <TabelGenerator />
-    <p>joost</p>
-  </div>
-)
+  return(
+    <div>
+      <TabelGenerator />
+      <p>joost</p>
+    </div>
+  )
 }
 
 export default App;
