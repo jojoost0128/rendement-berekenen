@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react"
 
 
 
-const TabelGenerator = () => {
+const TabelGenerator = (props) => {
 
     let currentDate = new Date().toISOString().split('T')[0]
     //  in tabledata en de code t/m regel 14 pakt de API en vewerkt het in een object
@@ -12,7 +12,10 @@ const TabelGenerator = () => {
     const tijdelijke_Variabele = [{"fundId":1,"fundName":"ASN Duurzaam Aandelenfonds","prices":{"2025-02-17":175.33,"2025-02-14":177.34,"2025-02-13":175.43,"2025-02-12":176.8}},{"fundId":2,"fundName":"ASN Duurzaam Obligatiefonds","prices":{"2025-02-25":25.22,"2025-02-24":25.2,"2025-02-21":25.12,"2025-02-20":25.11,"2025-02-19":25.17,"2025-02-18":25.17,"2025-02-17":25.23,"2025-02-14":25.22}}]
     
     const [tabledata, setTabledata] = useState(tijdelijke_Variabele)
-
+    //setTabledata(JSON.stringify(props.DataForTable.key))
+    const testje = props.DataForTable
+    console.log("hieronder is je testje")
+    console.log(testje)
 
     const key = "prices"
     //de array is om de plaatsing van de datums te zien van priceKeys
@@ -60,6 +63,7 @@ const TabelGenerator = () => {
             </table>
             <h3>{rendementArrey}</h3>
             <h4>{`${datumArrey}`}</h4>
+            <h1>{`${JSON.stringify(testje)}`}</h1>
         </div>
     )
 }

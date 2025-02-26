@@ -20,12 +20,12 @@ const RendementTabel = () => {
     
         }, [])
 
-        const testbestand = tabledata.map(item => {console.log(`dit is een Item van for each:${item["fundId"]}`)})
+        //const testbestand = tabledata.map(item => {console.log(`dit is een Item van for each:${item["fundId"]}`)})
 
     return (
         <div>
-            <p>{`${JSON.stringify(tabledata[1])}`}</p>
-            <p>{`${testbestand}`}</p>
+            <p>{`${tabledata[1]}`}</p>
+            <TabelGenerator DataForTable = {tabledata[1]}/>
         </div>
     )
 }

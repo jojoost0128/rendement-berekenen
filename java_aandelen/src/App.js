@@ -7,7 +7,6 @@ function App() {
   return(
     <div>
       <RendementTabel />
-      <TabelGenerator />
       <p>joost</p>
     </div>
   )
